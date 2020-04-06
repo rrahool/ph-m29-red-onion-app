@@ -46,8 +46,10 @@ const Header = (props) => {
                     <div className="col">
                         <div className="logo-aria">
                             <Link to="/"><img src="https://i.ibb.co/71T806h/logo-header.png" alt="red onion logo" /></Link>
+                            <Link to="/insert_data">Insert Data</Link>
                         </div>
                     </div>
+                    
                     <div className="col">
                         <div className="header-right">
                             <div className="d-flex">
