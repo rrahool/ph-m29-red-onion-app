@@ -20,7 +20,7 @@ const LoginUser = ({route}) => {
 const LogoutUser = () => {
     return (
         <>
-            <Link to="/signup"><button className="btn signup-btn primary-btn">Sign up</button></Link>
+            <Link to="/signup"><button className="btn signup-btn primary-btn">Sign Up</button></Link>
             <Link to="/login"><button className="btn">Login</button></Link>
         </>
     )

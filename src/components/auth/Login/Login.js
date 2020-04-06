@@ -58,10 +58,10 @@ const Login = (props) => {
           <form onSubmit={loginUser}>
             <InputItem name="email" type="email" onchangeHandler={onchangeHandler} placeholder="Email" value={email} />
             <InputItem name="password" type="password" onchangeHandler={onchangeHandler} placeholder="Password" value={password} />
-            <button type="submit" className="btn login-btn w-100">Log In</button>
+            <button type="submit" className="btn login-btn w-100">Login</button>
           </form>
             {error.message && <p className="py-2">{error.message}</p>}
-          <b><p className="text-center py-2 no-account">Don't have an account ? <Link to="/signup"> Sign up</Link></p></b>
+          <b><p className="text-center py-2 no-account">Don't have an account ? <Link to="/signup"> Create New Account</Link></p></b>
         </div>
       </div>
     </div>

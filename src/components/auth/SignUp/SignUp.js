@@ -71,9 +71,9 @@ const SignUp = (props) => {
             <InputItem name="email" type="email" placeholder="Email" onchangeHandler={onchangeHandler} value={email} />
             <InputItem name="password" type="password" placeholder="Password" onchangeHandler={onchangeHandler} value={password} />
             <InputItem name="confirmPassword" type="password" placeholder="Confirm Password" onchangeHandler={onchangeHandler} value={confirmPassword} />
-            <button type="submit" className="btn sign-up-btn w-100">Submit</button>
+            <button type="submit" className="btn sign-up-btn w-100">Create Account</button>
           </form>
-          <p className="text-center py-2 has-account"><Link to="/login"><b>Already have an account?</b></Link></p>
+          <p className="text-center py-2 has-account"><b>Already have an account? <Link to="/login">Login Here</Link></b></p>
         </div>
       </div>
     </div>
