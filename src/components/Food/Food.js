@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import foods from '../../fakeData/fakeData';
 import './Food.css'
 import FoodItem from './FoodItem';
 import { UserContext} from '../auth/useAuth'
@@ -28,10 +27,18 @@ const Food = (props) => {
     //  initials set data 
     const [items, setItems] = useState([])
 
-    useEffect(() => {
-        const data = foods.filter(item => item.catagories === selectedItem)
-        setItems(data)
+    useEffect(() => {        
+        fetch('http://localhost:4000/products/')
+        .then(res => res.json())
+        .then(data => {
+            setItems(data)
+        })
     }, [selectedItem])
+
+    const foodItems = items.filter(item => item.catagories === selectedItem)
+    console.log(foodItems);
+    
+
 
     // conditionally set data when click catagories
     const selectHandler = item => {
@@ -82,7 +89,7 @@ const Food = (props) => {
                     </div>
                 </div>
                 <div className="row food-items">
-                    {items.map(item => <FoodItem key={item.id} item={item} />)}
+                    {foodItems.map(item => <FoodItem key={item.id} item={item} />)}
                     <div className="w-100"></div>
                     <div className="checkout-btn-aria m-auto">
                         <button 

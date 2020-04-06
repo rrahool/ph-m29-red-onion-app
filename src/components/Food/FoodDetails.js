@@ -1,19 +1,24 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './FoodDetails.css'
 import { useParams, Link } from 'react-router-dom';
-import foods from '../../fakeData/fakeData';
 import { UserContext } from '../auth/useAuth';
 
 const FoodDetails = (props) => {
   const {addToCart } = useContext(UserContext)
-  const pdId = useParams()
+  const productKey = useParams()
   const [quantity, setQuantity] = useState(1)
   const [product, setProduct] = useState(null)
 
-  useEffect(()=>{
-    const data = foods.filter(item => item.id === parseInt(pdId.id))
-    setProduct(data[0])
-  },[pdId])
+
+  useEffect(() => {
+    // const data = foods.filter(item => item.id === parseInt(pdId.id))
+    fetch('http://localhost:4000/products/'+productKey.id)
+    .then(res => res.json())
+    .then(data => {
+      setProduct(data)
+    })
+    
+  }, [])
 
   // onchange handler
   const onchangeHandler = e => {

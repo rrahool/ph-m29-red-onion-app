@@ -3,9 +3,9 @@ import foods from '../../fakeData/fakeData';
 
 const InsertData = () => {
 
-    const handleAddInventory = () => {
+    const handleAddFoods = () => {
         const product = foods[0];
-        console.log("Before post", foods.length);
+        console.log("Before post food", foods.length);
         fetch('http://localhost:4000/addProduct', {
             method: 'POST', 
             headers: {
@@ -15,15 +15,16 @@ const InsertData = () => {
           })
           .then(res => res.json())
           .then(data => {
-            console.log("Post Success", data);
+            console.log("Food Post Success", data);
         });
   
     }
 
+
     return (
         <div>
             <h1>Inser Data</h1>
-            <button onClick={handleAddInventory} >Insert Data</button>
+            <button onClick={handleAddFoods} >Insert Foods</button><br/><br/>
         </div>
     );
 };
