@@ -46,7 +46,6 @@ const Header = (props) => {
                     <div className="col">
                         <div className="logo-aria">
                             <Link to="/"><img src="https://i.ibb.co/71T806h/logo-header.png" alt="red onion logo" /></Link>
-                            <Link to="/insert_data">Insert Data</Link>
                         </div>
                     </div>
                     
@@ -54,11 +53,16 @@ const Header = (props) => {
                         <div className="header-right">
                             <div className="d-flex">
                                 {user ? <LoginUser route={props} /> : <LogoutUser/> }
-                            <Link to="/cart">
-                                <button className="btn"> 
-                                        <i className="fa fa-cart-plus" aria-hidden="true">
-                                            </i> <span style={{color:'red'}}> {cart && cartItem}</span>
-                                    </button></Link>
+                                <Link to="/cart">
+                                    <button className="btn"> 
+                                            <i className="fa fa-cart-plus" aria-hidden="true">
+                                                </i> <span style={{color:'red'}}> {cart && cartItem}</span>
+                                    </button>
+                                </Link>
+
+                                <Link to="/insert_data">
+                                    <button className="btn btn-outline-danger xtra-btn">Insert Data</button> 
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -22,9 +22,11 @@ const InsertData = () => {
 
 
     return (
-        <div>
+        <div className="col text-center">
+            <br/><br/>
             <h1>Inser Data</h1>
-            <button onClick={handleAddFoods} >Insert Foods</button><br/><br/>
+            <br/>
+            <button onClick={handleAddFoods} className="btn btn-lg btn-success xtra-btn">Insert Foods</button><br/><br/>
         </div>
     );
 };
