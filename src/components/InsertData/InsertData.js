@@ -26,7 +26,7 @@ const InsertData = () => {
             <br/><br/>
             <h1>Inser Data</h1>
             <br/>
-            <button onClick={handleAddFoods} className="btn btn-lg btn-success xtra-btn">Insert Foods</button><br/><br/>
+            <button onClick={handleAddFoods} className="btn btn-lg btn-primary xtra-btn">Insert Foods</button><br/><br/>
         </div>
     );
 };
